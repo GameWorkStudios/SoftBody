@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MeshFilter))]
 public class Pressurable : MonoBehaviour
 {
 
@@ -32,7 +33,7 @@ public class Pressurable : MonoBehaviour
     }
 
 
-    void LateUpdate()
+    void Update()
     {
         if(Input.GetKeyDown(KeyCode.F)){
             if(randomVertexID == -1){
